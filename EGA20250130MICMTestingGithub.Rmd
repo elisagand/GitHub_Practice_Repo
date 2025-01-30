@@ -1,0 +1,95 @@
+---
+title: "20250130MICMWorkshopGitHub"
+author: "Elisa Goncalves de Andrade"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+Version control systems: unlimited "undo" button
+Git is a type of version control system, open source
+	Only works with pure text files (not word)
+	
+Github cloud/server to store the git work, owned by Microsoft, does NOT store files, but can go back
+
+In git:
+	1. Working directory
+		A. Code.py - "New" (git label)
+	2. Git Repository
+		Staging area
+			i. Add Code.py "New"
+		Local repository
+			ii. Commit Code.py "New"
+			
+				Working directory
+					Code.py - "Staged" (git label)
+				Git Repository
+					Staging area
+					Local repository
+						
+						Working directory
+							Code.py - "Modified" (git label)
+						Git Repository
+							Staging area
+							Local repository
+							           Code.py "New"
+								Code.py - "Modified" (git label)
+								
+	Every commit must have an attached message: helps others identify what changed were made and why
+			
+Protocol:
+
+	1. Create repository on github
+		A. Terminal: cd > ls -a > 
+		(base) MacBook-Pro-de-Elisa:20250130MICMWorkshopGitHub elisa$ ls -a
+.		..		.git		.gitattributes
+
+added to the local directory and commit on the github app
+
+gitignore:
+
+  files that github should ignore (for instance due to confidentiality),
+  the directory can have the data files, but with gitignore they are not uploaded   to the server
+  
+unwanted changes:
+
+  in the staging area: right click + discard
+  after committing: right click + revert (tracks as a commit, has to be a different file)
+                    right click + reset (does not track as a commit, returns to staging area)   
+
+branching: 
+  keeps the original timeline, tracks changes only in the new branch and not the older one
+  keeps the original timeline, tracks changes only in the new branch and not the older one
+  
+merge:
+  
+  merges the changes from one branch into another
+  
+rebasing:
+
+  adds merge within the main, before last stop
+
+conflicts:
+
+  if branches have competing commits: edits on the same line, files with the same name, one branch adds a file, the other deletes it. opens the terminal to inspect where are the changes
+
+  when collaborating on the same project: work on different branches, files and communication 
+  
+push/pull:
+
+  push (publish repository) - working directory > local repository > remote repository
+  pull (arrow down fetch > pull) - remote repository > local repository > working directory 
+  
+cloning:
+  
+  done to use published code, few can push, most can pull
+  copy url from github
+  desktop app > file > clone repository > url
+
+fork:
+
+  creates a remote copy of a github repository
+  on the user profile: fork 
+  locally: clone to local repository
+  push to the forked repository
+  pull request to the original code
+  can then push requests
